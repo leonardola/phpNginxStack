@@ -11,3 +11,22 @@ php:
     build: ./
     volumes:
         - ./code:/code
+    restart: always
+phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    restart: always
+    ports:
+     - 8080:80
+    links:
+     - db:db
+db:
+    image: mysql
+    restart: always
+    ports:
+        - "3306:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+
