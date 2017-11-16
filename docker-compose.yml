@@ -7,6 +7,7 @@ web:
         - ./conf.d:/etc/nginx/conf.d
     links:
         - php
+        - db
 php:
     build: ./
     volumes:
