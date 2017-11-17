@@ -5,6 +5,7 @@ web:
     volumes:
         - ./code:/code
         - ./conf.d:/etc/nginx/conf.d
+        - ./fastcgi.conf:/etc/nginx/fastcgi.conf
     links:
         - php
         - db
@@ -30,4 +31,6 @@ db:
         - "3306:3306"
     environment:
         MYSQL_ROOT_PASSWORD: root
+    volumes:
+        - ./code:/code
 
