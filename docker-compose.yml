@@ -17,6 +17,8 @@ services:
         volumes:
             - ./code:/code
         restart: always
+        links:
+            - db:db
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
