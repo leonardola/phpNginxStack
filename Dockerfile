@@ -13,3 +13,4 @@ RUN pecl install pecl install xdebug-2.5.0 \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install soap
+COPY config/php/mods-available/xdebug.ini /usr/local/etc/php/conf.d/

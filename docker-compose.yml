@@ -11,14 +11,11 @@ services:
             - ./fastcgi.conf:/etc/nginx/fastcgi.conf
         links:
             - php
-            - db
     php:
         build: ./
         volumes:
             - ./code:/code
         restart: always
-        links:
-            - db:db
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
@@ -27,17 +24,17 @@ services:
         restart: always
         ports:
          - 8080:80
-        links:
-         - db:db
-        depends_on:
-            - db
-    db:
-        image: mysql
-        restart: always
-        ports:
-            - "3307:3306"
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-        volumes:
-            - ./code:/code
+        #links:
+        # - db:db
+        #depends_on:
+        #    - db
+    #db:
+        #image: mysql
+        #restart: always
+        #ports:
+        #    - "3307:3306"
+        #environment:
+        #    MYSQL_ROOT_PASSWORD: root
+        #volumes:
+        #    - ./code:/code
 
