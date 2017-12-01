@@ -6,7 +6,7 @@
 - xdebug is pre-configured for phpstorm, change config in config/php/xdebug.ini file
 - to change the php version just change the Dockerfile to the version you want
 
-### how to use ###
+### How to use ###
 - clone this repository
 - add your magento project folder inside code/ folder
 - add your nginx config file into config/nginx/ folder
