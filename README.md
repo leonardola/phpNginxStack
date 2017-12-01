@@ -2,8 +2,8 @@
 
 ### A magento stack with mysql, nginx, php-fpm and everything to run a magento store ###
 
-- xdebug will answer on 10.254.254.254:9001, you can change that on your xdebug.ini file
-- xdebug is pre-configured for phpstorm, change config in xdebug.ini file
+- xdebug will answer on 10.254.254.254:9001, you can change that in config/php/xdebug.ini file
+- xdebug is pre-configured for phpstorm, change config in config/php/xdebug.ini file
 - to change the php version just change the Dockerfile to the version you want
 
 ### how to use ###
