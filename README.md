@@ -17,6 +17,8 @@
       127.0.0.1  phpinfo.com <br>
 - open example.com on your browser. You should see the message "welcome to the magento docker stack"
 - open phpinfo.com on your browser. You should see the phpinfo page
+- to 'ssh' into the nginx container just use ./bash.sh
+
 
 #### To add configurations to php #### 
 - create a .ini file on config/php/
