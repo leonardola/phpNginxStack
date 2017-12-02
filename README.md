@@ -8,11 +8,10 @@
 - database user is root and password root (can be changed on docker-compose.yml file)
 - phpmyadmin can be accesses on http://localhost:8080/
 - bundled with php56-fpm and php70-fpm
+- to 'ssh' into the nginx container just use ./bash.sh
 
 ### How to use ###
 - clone this repository
-- add your magento project folder inside code/ folder
-- add your nginx config file into config/nginx/ folder (copy the example70.conf or example56.conf file)
 - sudo docker-compose build
 - sudo docker-compose up (need this on the first run, than you can change up to start)
 - add this to your /etc/hosts file: <br>
@@ -26,7 +25,9 @@
 ![alt text](https://github.com/leonardola/phpNginxStack/blob/master/70.png)
 - open http://phpinfo56.com on your browser. You should see the phpinfo page of the php 56
 - open http://phpinfo70.com on your browser. You should see the phpinfo page of the php 70
-- to 'ssh' into the nginx container just use ./bash.sh
+
+- add your magento project folder inside code/ folder
+- add your nginx config file into config/nginx/ folder (copy the example70.conf or example56.conf file)
 
 
 #### To add configurations to php #### 
