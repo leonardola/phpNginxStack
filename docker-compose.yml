@@ -1,4 +1,4 @@
-version: '2'
+version: '3.3'
 
 services:
     web:
@@ -10,9 +10,22 @@ services:
             - ./config/nginx:/etc/nginx/conf.d
             - ./fastcgi.conf:/etc/nginx/fastcgi.conf
         links:
-            - php
-    php:
-        build: ./
+            - php56
+            - php70
+        depends_on:
+            - php56
+            - php70
+    php56:
+        build:
+           context: ./ 
+           dockerfile: ./DockerfilePhp56
+        volumes:
+            - ./code:/code
+        restart: always
+    php70:
+        build:
+            context: ./ 
+            dockerfile: ./DockerfilePhp70
         volumes:
             - ./code:/code
         restart: always
