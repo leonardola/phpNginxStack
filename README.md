@@ -5,6 +5,7 @@
 - xdebug will answer on 10.254.254.254:9001, you can change that in config/php/xdebug.ini file
 - xdebug is pre-configured for phpstorm, change config in config/php/xdebug.ini file
 - use "db" instead of an ip when connecting to the database
+- database user is root and password root (can be changed on docker-compose.yml file)
 - phpmyadmin can be accesses on http://localhost:8080/
 - bundled with php56-fpm and php70-fpm
 
