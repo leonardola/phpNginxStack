@@ -19,8 +19,10 @@
       127.0.0.1  example70.com <br>
       127.0.0.1  phpinfo56.com <br>
       127.0.0.1  phpinfo70.com <br>
-- open http://example56.com on your browser. You should see the message "Welcome to the magento docker stack" and "Database connection is working"
-- open http://example70.com on your browser. You should see the message "Welcome to the magento docker stack" and "Database connection is working"
+- open http://example56.com on your browser. You should see this
+![alt text](https://github.com/leonardola/phpNginxStack/blob/master/56.png)
+- open http://example70.com on your browser. You should see this
+![alt text](https://github.com/leonardola/phpNginxStack/blob/master/70.png)
 - open http://phpinfo56.com on your browser. You should see the phpinfo page of the php 56
 - open http://phpinfo70.com on your browser. You should see the phpinfo page of the php 70
 - to 'ssh' into the nginx container just use ./bash.sh
