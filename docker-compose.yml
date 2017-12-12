@@ -1,4 +1,4 @@
-version: '3.3'
+version: '2'
 
 services:
     web:
@@ -6,7 +6,7 @@ services:
         ports:
             - "80:80"
         volumes:
-            - ./code:/code
+            - DataVolume1:/code
             - ./config/nginx:/etc/nginx/conf.d
             - ./fastcgi.conf:/etc/nginx/fastcgi.conf
         links:
@@ -20,14 +20,14 @@ services:
            context: ./ 
            dockerfile: ./DockerfilePhp56
         volumes:
-            - ./code:/code
+           - DataVolume1:/code
         restart: always
     php70:
         build:
             context: ./ 
             dockerfile: ./DockerfilePhp70
         volumes:
-            - ./code:/code
+            - DataVolume1:/code
         restart: always
         links:
             - db
@@ -50,4 +50,14 @@ services:
         #    - "3307:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
-
+    ssh:
+        build:
+           context: ./
+           dockerfile: ./DockerfileSsh
+        volumes:
+           - DataVolume1:/code
+        restart: always
+        ports:
+           - "2200:22"
+volumes:
+  DataVolume1:
