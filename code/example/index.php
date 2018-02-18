@@ -4,7 +4,7 @@
 <?php
 echo "Php version is ". phpversion(). "<br/>";
 
-$link = mysqli_connect("db", "root", "root", "db") or die(mysqli_error());
+$link = mysqli_connect("db", "root", "root") or die(mysqli_error());
 echo "Database connection is working<br/>";
 
 ?>
