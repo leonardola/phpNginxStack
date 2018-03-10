@@ -12,8 +12,10 @@
 
 ### How to use ###
 - clone this repository
-- sudo docker-compose build
-- sudo docker-compose up (need this on the first run, than you can change up to start)
+- create an alias with `sudo ifconfig lo0 alias 10.254.254.254`
+- git checkout mac
+- docker-compose build
+- docker-compose up (need this on the first run, than you can change up to start)
 - add this to your /etc/hosts file: <br>
       127.0.0.1  example56.com <br>
       127.0.0.1  example70.com <br>
@@ -26,7 +28,12 @@
 - open http://phpinfo56.com on your browser. You should see the phpinfo page of the php 56
 - open http://phpinfo70.com on your browser. You should see the phpinfo page of the php 70
 
-- add your magento project folder inside code/ folder
+- send your files through sftp to the path /code/\<folder> using:<br>
+  user: root
+  password: screencast
+  ip: 10.254.254.254
+  port: 2200
+  
 - add your nginx config file into config/nginx/ folder (copy the example70.conf or example56.conf file)
 
 
