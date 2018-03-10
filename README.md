@@ -21,18 +21,21 @@
       127.0.0.1  example70.com <br>
       127.0.0.1  phpinfo56.com <br>
       127.0.0.1  phpinfo70.com <br>
+      
+- send the content of the folder code from this repository through sftp to the path /code/ using:<br>
+  user: root
+  password: screencast
+  ip: 10.254.254.254
+  port: 2200
+  
+  this is how you send php files to be run inside the containers
+  
 - open http://example56.com on your browser. You should see this
 ![alt text](https://github.com/leonardola/phpNginxStack/blob/master/56.png)
 - open http://example70.com on your browser. You should see this
 ![alt text](https://github.com/leonardola/phpNginxStack/blob/master/70.png)
 - open http://phpinfo56.com on your browser. You should see the phpinfo page of the php 56
 - open http://phpinfo70.com on your browser. You should see the phpinfo page of the php 70
-
-- send your files through sftp to the path /code/\<folder> using:<br>
-  user: root
-  password: screencast
-  ip: 10.254.254.254
-  port: 2200
   
 - add your nginx config file into config/nginx/ folder (copy the example70.conf or example56.conf file)
 
