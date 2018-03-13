@@ -5,6 +5,7 @@ services:
         image: nginx:latest
         ports:
             - "80:80"
+            - "443:443"
         volumes:
             - DataVolume1:/code
             - ./config/nginx:/etc/nginx/conf.d
@@ -12,6 +13,7 @@ services:
         links:
             - php56
             - php70
+            - db
         depends_on:
             - php56
             - php70
