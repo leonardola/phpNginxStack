@@ -12,9 +12,11 @@ services:
         links:
             - php56
             - php70
+	    - db
         depends_on:
             - php56
             - php70
+ 	    - db
     php56:
         build:
            context: ./ 
